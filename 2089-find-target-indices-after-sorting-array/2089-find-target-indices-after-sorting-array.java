@@ -8,8 +8,11 @@ class Solution {
             if(num == target) targetVal++;
         }
         
-        for(int i = lessThan; i<(lessThan+targetVal); i++){
-            finalList.add(i);
+        if(targetVal == 0) return finalList;
+        
+        for(int i = 0; i<targetVal; i++){
+            finalList.add(lessThan);
+            lessThan++;
         }
             
         return finalList;
