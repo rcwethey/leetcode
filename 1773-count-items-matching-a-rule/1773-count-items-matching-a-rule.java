@@ -7,8 +7,8 @@ class Solution {
         else index=2;
         
         for(int i=0; i<items.size(); i++){
-            List<String> item = items.get(i);
-            if((item.get(index)).equals(ruleValue)) itemsMatched++;
+            //List<String> item = items.get(i);
+            if((items.get(i).get(index)).equals(ruleValue)) itemsMatched++;
         }
         
         return itemsMatched;
