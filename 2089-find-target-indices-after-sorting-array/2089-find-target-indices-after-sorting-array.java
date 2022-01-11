@@ -1,6 +1,5 @@
 class Solution {
     public List<Integer> targetIndices(int[] nums, int target) {
-        List<Integer> finalList = new ArrayList<>();
         int lessThan = 0, targetVal = 0;
         
         for(int num: nums){
@@ -8,8 +7,9 @@ class Solution {
             if(num == target) targetVal++;
         }
         
-        if(targetVal == 0) return finalList;
+        if(targetVal == 0) return new ArrayList<Integer>();
         
+        List<Integer> finalList = new ArrayList<>();
         for(int i = 0; i<targetVal; i++){
             finalList.add(lessThan);
             lessThan++;
