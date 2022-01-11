@@ -3,7 +3,6 @@ class Solution {
         int itemsMatched = 0, index = (ruleKey.equals("type")) ? 0 : (ruleKey.equals("color")) ? 1:2;
         
         for(int i=0; i<items.size(); i++){
-            //List<String> item = items.get(i);
             if((items.get(i).get(index)).equals(ruleValue)) itemsMatched++;
         }
         
