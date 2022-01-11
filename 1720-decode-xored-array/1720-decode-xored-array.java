@@ -1,18 +1,15 @@
 class Solution {
     public int[] decode(int[] encoded, int first) {
-        List<Integer> tempList = new ArrayList<>();
-        
+        int[] finaList = new int[encoded.length+1];
         
         for(int i = 0; i< encoded.length; i++){
-            tempList.add(first);
+            finaList[i] = first;
             first = encoded[i]^first;
         }
         
-        tempList.add(first);
+        finaList[encoded.length] = first;
         
-        int[] finalList = new int[tempList.size()];
-        for(int k = 0; k < finalList.length; k++) finalList[k] = tempList.get(k);
         
-        return finalList;
+        return finaList;
     }
 }
