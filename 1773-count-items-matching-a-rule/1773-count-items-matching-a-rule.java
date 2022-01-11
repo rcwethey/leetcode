@@ -1,10 +1,6 @@
 class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
-        int itemsMatched = 0, index;
-        
-        if(ruleKey.equals("type")) index = 0;
-        else if(ruleKey.equals("color")) index = 1;
-        else index=2;
+        int itemsMatched = 0, index = (ruleKey.equals("type")) ? 0 : (ruleKey.equals("color")) ? 1:2;
         
         for(int i=0; i<items.size(); i++){
             //List<String> item = items.get(i);
