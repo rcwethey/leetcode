@@ -4,7 +4,7 @@ class Solution {
         for(int i = 0; i < s.length(); i++){
             char current = s.charAt(i);
             if(current == 'R') count++;
-            if(current == 'L') count--;
+            else count--;
             if(count == 0) sum++;
         }
         
