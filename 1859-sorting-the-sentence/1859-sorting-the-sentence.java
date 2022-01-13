@@ -10,7 +10,10 @@ class Solution {
         }
         
         StringBuilder finalString = new StringBuilder();
-        for(String word: finalArr) finalString.append(word).append(" ");
+        for(String word: finalArr) 
+            finalString.append(word).append(" ");
+        
         return finalString.toString().trim();
+        
     }
 }
