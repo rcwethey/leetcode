@@ -11,8 +11,7 @@ class Solution {
         
         StringBuilder finalString = new StringBuilder();
         for(String word: finalArr){
-            finalString.append(word);
-            finalString.append(" ");
+            finalString.append(word).append(" ");
         }
         
         return finalString.toString().trim();
