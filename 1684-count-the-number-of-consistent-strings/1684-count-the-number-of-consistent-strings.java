@@ -1,9 +1,19 @@
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
-        int count = words.length;
+        Set isAllowed = new HashSet<>();
+        int result = words.length;
+        //char[] allowedChar = allowed.toCharArray();
+        for(int i=0; i<allowed.length(); i++) isAllowed.add(allowed.charAt(i));
+        
         for(String word: words){
-            if(!word.matches("[" + allowed + "]+")) count--;
+            for(int i= 0; i< word.length(); i++){
+                if(!isAllowed.contains(word.charAt(i))){
+                    result--;
+                    break;
+                }
+            }
         }
-        return count;
+                   
+        return result;
     }
 }
