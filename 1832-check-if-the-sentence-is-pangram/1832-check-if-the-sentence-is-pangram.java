@@ -1,15 +1,16 @@
 class Solution {
     public boolean checkIfPangram(String sentence) {
         if(sentence.length() < 26) return false;
-        HashMap<Character, Boolean> alphabet = new HashMap<>();
-        for(int i = 'a'; i<='z'; i++) alphabet.put((char)i, false);
         
-        for(int i = 0; i< sentence.length(); i++){
-            char c = sentence.charAt(i);
-            if(alphabet.containsKey(c) && alphabet.get(c) == false) alphabet.put(c, true);
+        //HashMap<Character, Boolean> alphabet = new HashMap<>();
+        char[] alphabet = new char[26];
+        int index = 0;
+        for(int i = 'a'; i<='z'; i++){
+            alphabet[index] = (char)i;
+            index++;
         }
         
-        if(alphabet.containsValue(false)) return false;
+        for(char c: alphabet) if(sentence.indexOf(c) < 0) return false;
         return true;
     }
 }
