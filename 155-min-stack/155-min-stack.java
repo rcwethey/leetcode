@@ -1,11 +1,11 @@
 class MinStack {
     
-    Stack<Integer> min_stack;
-    Stack<Integer> min_val;
+    Deque<Integer> min_stack;
+    Deque<Integer> min_val;
 
     public MinStack() {
-        min_stack = new Stack();
-        min_val = new Stack();
+        min_stack = new ArrayDeque();
+        min_val = new ArrayDeque();
     }
     
     public void push(int val) {
