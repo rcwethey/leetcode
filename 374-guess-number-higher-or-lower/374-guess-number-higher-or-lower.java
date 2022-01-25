@@ -5,13 +5,13 @@
  *			      1 if num is higher than the guess number
  *               otherwise return 0
  * int guess(int num);
+ * time complexity: O(log n)
+ * time: 0ms
+ * space complexity: n
+ * space: 35.8 mb
  */
 
 public class Solution extends GuessGame {
-    //time complexity: O(log n)
-    //time: 0ms
-    //space complexity: n
-    //space: 35.8 mb
     public int guessNumber(int n) {
         if(guess(1) != 0) return helper(1, n);
         return 1;
