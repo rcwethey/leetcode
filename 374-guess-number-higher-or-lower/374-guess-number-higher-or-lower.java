@@ -5,6 +5,7 @@
  *			      1 if num is higher than the guess number
  *               otherwise return 0
  * int guess(int num);
+ *
  * time complexity: O(log n)
  * time: 0ms
  * space complexity: n
