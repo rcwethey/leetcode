@@ -10,6 +10,7 @@
  * time: 0ms
  * space complexity: n
  * space: 35.8 mb
+ *
  */
 
 public class Solution extends GuessGame {
