@@ -19,18 +19,10 @@ class Solution {
     public List<Integer> finalList = new ArrayList<>();
     
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
-        
-        //Traverse one tree and add all elements to Priority Queue.
         if(root1 != null) helper(root1);
-        
-        //Traverse second treee and add all elementrs to Priority Queue.
         if(root2 != null) helper(root2);
-        
-        //fill list with queue
         while(!finalQueue.isEmpty()) finalList.add(0,finalQueue.poll());
-        
-        return finalList;
-        
+        return finalList; 
     }
     
     public void helper(TreeNode root){
