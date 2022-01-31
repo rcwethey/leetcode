@@ -4,9 +4,7 @@ class Solution {
         while(lp < rp){
             while(lp < nums.length && nums[lp] % 2 == 0) lp++;
             while(rp > 0 && nums[rp] % 2 == 1) rp--;
-            if((lp < nums.length && rp > 0) && lp != rp+1){
-                swap(nums, lp, rp);
-            }
+            if((lp < nums.length && rp > 0) && lp != rp+1) swap(nums, lp, rp);
             lp++;
             rp--;
         }
