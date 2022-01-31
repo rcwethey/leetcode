@@ -6,6 +6,10 @@ class Solution {
     public List<String> summaryRanges(int[] nums) {
         finalSummaryRanges = new ArrayList<>();
         if(nums.length == 0) return finalSummaryRanges;
+        if(nums.length == 1){
+            finalSummaryRanges.add(Integer.toString(nums[0]));
+            return finalSummaryRanges;
+        }
         
         for(int i = 0; i<nums.length; i++){
             if(rightPointer+1 < nums.length && nums[rightPointer+1] == nums[rightPointer]+1) rightPointer++;
