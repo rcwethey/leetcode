@@ -16,7 +16,7 @@ class Solution {
     }
     
     public void addtoArrayList(int[] nums){
-        if(leftPointer < rightPointer) 
+        if(leftPointer < rightPointer)
             finalSummaryRanges.add(Integer.toString(nums[leftPointer])+"->"+Integer.toString(nums[rightPointer]));
         else finalSummaryRanges.add(Integer.toString(nums[rightPointer]));
         
