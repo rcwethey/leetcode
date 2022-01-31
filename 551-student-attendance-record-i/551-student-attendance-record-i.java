@@ -16,6 +16,7 @@ class Solution {
                 if(latesInARow > maxLate) maxLate = latesInARow;
                 latesInARow = 0;
             }
+            if(absence > 1 || latesInARow > 2) return false;
         }
         
         if(latesInARow > maxLate) maxLate = latesInARow;
