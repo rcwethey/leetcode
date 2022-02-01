@@ -1,8 +1,7 @@
 class Solution {
     public int isPrefixOfWord(String sentence, String searchWord) {
         String[] words = sentence.split(" ");
-        int lengthOfSearchWord = searchWord.length();
-        int minIndex = -1;
+        int lengthOfSearchWord = searchWord.length(), minIndex = -1;
         
         for(int i = 0; i< words.length; i++){
             if(lengthOfSearchWord > words[i].length()) continue;
