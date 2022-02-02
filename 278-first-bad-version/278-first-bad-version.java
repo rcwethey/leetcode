@@ -4,7 +4,7 @@
 public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
         if(n == 1) return 1;
-        int lp = 0, rp = n;
+        int lp = 1, rp = n;
         
         while(lp <= rp){
             int midPoint = lp + (rp - lp) / 2;
