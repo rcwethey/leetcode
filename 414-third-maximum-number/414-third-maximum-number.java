@@ -6,14 +6,10 @@ class Solution {
         for(int num: nums) set.add(num);
         for(Integer number : set) pQ.add(number);
         
-        System.out.println(pQ.size());
-        
-        if(pQ.size() < 3){
-            return pQ.poll();
-        }else{
-            System.out.println(pQ.poll());
-            System.out.println(pQ.poll());
-            //pQ.poll(); 
+        if(pQ.size() < 3) return pQ.poll();
+        else{
+            pQ.poll(); 
+            pQ.poll(); 
         }
         
         return pQ.poll();
