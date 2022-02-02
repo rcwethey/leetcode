@@ -1,13 +1,13 @@
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        if(nums == null || nums.length == 0) return 0;
+        //if(nums == null || nums.length == 0) return 0;
         
-        int lp = 0, rp = nums.length;
+        int lp = 0, rp = nums.length-1;
         
-        while(lp < rp){
+        while(lp <= rp){
             int midPoint = lp + (rp - lp) /2;
             if(nums[midPoint] == target) return midPoint;
-            else if(target < nums[midPoint]) rp = midPoint;
+            else if(target < nums[midPoint]) rp = midPoint-1;
             else lp = midPoint+1;
         }
         return lp;
