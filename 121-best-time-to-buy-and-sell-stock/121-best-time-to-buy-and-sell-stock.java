@@ -25,11 +25,13 @@ class Solution {
         int profit=0;
         int min=Integer.MAX_VALUE;
         for(int price : prices){
-            //Same thing as saying -> if(prices[i] < min) min = prices[i]; 
-            min=Math.min(min,price);
+            //Same thing as saying -> 
+            if(price < min) min = price; 
+            //min=Math.min(min,price);
             
-            //Same thing as saying -> if(prices[i]-min > profit) profit = prices[i]-min; 
-            profit=Math.max(profit,price-min);
+            //Same thing as saying -> 
+            if(price-min > profit) profit = price-min; 
+            //profit=Math.max(profit,price-min);
          }
 
         return profit;
