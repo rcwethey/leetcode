@@ -1,21 +1,21 @@
 class Solution {
     public int thirdMax(int[] nums) {
-        List<Integer> finalList = new ArrayList<>();
+        PriorityQueue<Integer> pQ = new PriorityQueue<>(Collections.reverseOrder());
+        Set<Integer> set = new HashSet<>();
         
-        for(int num: nums){
-            if(!finalList.contains(num)) finalList.add(num);
+        for(int num: nums) set.add(num);
+        for(Integer number : set) pQ.add(number);
+        
+        System.out.println(pQ.size());
+        
+        if(pQ.size() < 3){
+            return pQ.poll();
+        }else{
+            System.out.println(pQ.poll());
+            System.out.println(pQ.poll());
+            //pQ.poll(); 
         }
         
-        //for (Integer ele : finalList) {
-        //    System.out.println(ele);
-        //}
-        
-        if(finalList.size() < 3 && finalList.size() > 1)
-            return Math.max(finalList.get(0), finalList.get(1));
-        else if(finalList.size() == 1) return finalList.get(0);
-        
-        Collections.sort(finalList, Collections.reverseOrder());
-        
-        return finalList.get(2);
+        return pQ.poll();
     }
 }
