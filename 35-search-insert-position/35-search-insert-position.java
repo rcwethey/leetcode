@@ -1,5 +1,43 @@
 class Solution {
     public int searchInsert(int[] nums, int target) {
+        if(nums == null || nums.length == 0) return 0;
+        
+        int lp = 0, rp = nums.length;
+        
+        while(lp < rp){
+            int midPoint = lp + (rp - lp) /2;
+            if(nums[midPoint] == target) return midPoint;
+            else if(target < nums[midPoint]) rp = midPoint;
+            else lp = midPoint+1;
+        }
+        return lp;
+        
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    public int searchInsert(int[] nums, int target) {
         int start = 0;
         int end = nums.length-1;
         return logSearch(nums, start, end, target);
@@ -13,6 +51,5 @@ class Solution {
         
         if(target < nums[midIndex]) return logSearch(nums, start, midIndex-1, target);
         else return logSearch(nums, midIndex+1, end, target);
-    }    
-    
-}
+    } 
+    */
