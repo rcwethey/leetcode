@@ -8,7 +8,7 @@ public class Solution extends VersionControl {
         
         while(lp <= rp){
             int midPoint = lp + (rp - lp) / 2;
-            if(isBadVersion(midPoint)) rp = midPoint -1;
+            if(isBadVersion(midPoint)) rp = midPoint-1;
             else lp = midPoint+1;
         }
         
