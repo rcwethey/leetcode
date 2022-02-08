@@ -9,7 +9,7 @@ class Solution {
         4. reverse k t0 length-1 in array 
         */
         
-        // O(n) space and 
+        // O(n) space and o(n) time -- I think
         int[] solution = new int[nums.length];
         
         if(nums.length > 1 && k != 0){
