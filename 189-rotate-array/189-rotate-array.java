@@ -1,5 +1,13 @@
 class Solution {
     public void rotate(int[] nums, int k) {
+        
+        
+        
+        
+        
+        
+        
+        
         int[] solution = new int[nums.length];
         
         if(nums.length > 1 && k != 0){
