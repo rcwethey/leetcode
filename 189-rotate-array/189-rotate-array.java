@@ -1,10 +1,13 @@
 class Solution {
     public void rotate(int[] nums, int k) {
+        /*
+        To do with a O(1) space:
         
-        
-        
-        
-        
+        1. Take k mod length
+        2. Reverse array
+        3. reverse 0 to k-1 in array
+        4. reverse k t0 length-1 in array 
+        */
         
         
         
