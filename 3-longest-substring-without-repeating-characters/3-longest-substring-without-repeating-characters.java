@@ -7,8 +7,6 @@ class Solution {
         
         while(rp < size){
             sub = s.substring(lp, rp);
-            System.out.println(sub);
-            //System.out.println(sub.indexOf(s.charAt(rp)));
             if(sub.indexOf(s.charAt(rp)) >= 0){
                 lp += sub.indexOf(s.charAt(rp))+1;
             }
