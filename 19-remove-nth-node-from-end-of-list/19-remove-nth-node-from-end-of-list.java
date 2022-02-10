@@ -10,14 +10,10 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode temp= new ListNode(0);
-        temp.next = head;
-        ListNode first = temp;
-        ListNode second = temp;
+        ListNode temp= new ListNode(0, head);
+        ListNode first = temp, second = temp;
         // Advances first pointer so that the gap between first and second is n nodes apart
-        for (int i = 1; i <= n + 1; i++) {
-            first = first.next;
-        }
+        for (int i = 1; i <= n + 1; i++) first = first.next;
         // Move first to the end, maintaining the gap
         while (first != null) {
             first = first.next;
