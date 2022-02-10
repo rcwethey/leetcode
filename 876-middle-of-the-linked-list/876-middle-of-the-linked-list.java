@@ -18,10 +18,7 @@ class Solution {
         }
 
         if(lp == rp) return head;
-        
-        //if(rp%2 == 0) 
         mp = (int)(rp/2)+1;
-        //else mp = (int)(rp/2);
         
         while(lp<mp){
             finalNode = finalNode.next;
