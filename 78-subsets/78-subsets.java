@@ -1,7 +1,6 @@
 class Solution {
     List<List<Integer>> sol = new ArrayList<>();
     public List<List<Integer>> subsets(int[] nums) {
-        //List<Integer> sublist = new ArrayList<>();
         helper(nums, 0, new ArrayList<Integer>());
         return sol;
     }
