@@ -5,8 +5,11 @@ class Solution {
         arr = new int[n+1];
         createArray(arr);  
         
-        Arrays.sort(arr);
-        return arr[n];
+        int max = 1;
+        for(int i = 0; i< arr.length; i++){
+            max = Math.max(max, arr[i]);
+        }
+        return max;
     }
     
     void createArray(int[] arr){
