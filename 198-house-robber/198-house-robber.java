@@ -8,7 +8,7 @@ class Solution {
             if(i<2) dp[i] = Math.max(nums[i],dp[i-1]);
             else dp[i] = Math.max(nums[i]+dp[i-2],dp[i-1]);
         }
-        for(int i = 0; i<dp.length; i++) System.out.print(dp[i]+",");
+        //for(int i = 0; i<dp.length; i++) System.out.print(dp[i]+",");
         return dp[n-1];
     }
 }
